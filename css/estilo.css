@@ -1,0 +1,182 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fondo {
+  background-image: url(../imagenes/fondo.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  position: fixed;     /* Se queda en su lugar al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;         /* Lo manda al fondo */
+}
+
+
+
+.ap {}
+
+.cajain {
+  margin-top: 16px;
+  width: 980px;
+  height: 880px;
+  border-radius: 18px;
+  background-image: url(../imagenes/Copilot_20250910_124901.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+/* Oculta los radios */
+input[type="radio"] {
+  display: none;
+}
+
+.cajabot {
+  width: 100%;
+  height: 160px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+/* Botones como etiquetas */
+.bot {
+  border-radius: 8px;
+  padding: 18px 24px;
+  border: 2px solid rgb(202, 177, 33);
+  background: white;
+  color: rgb(202, 177, 33);
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+/* Botón activo más oscuro */
+#g1:checked ~ .cajabot label[for="g1"],
+#g2:checked ~ .cajabot label[for="g2"],
+#g3:checked ~ .cajabot label[for="g3"] {
+  background-color: #a38a1f;
+  color: white;
+}
+
+/* Contenedor visual */
+.caja2 {
+  width: 100%;
+  height: 720px;
+  position: relative;
+  border-radius: 0px 0px 18px 18px;
+  display: flex;
+}
+
+/* Grupos ocultos por defecto */
+.grupo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.5s ease, z-index 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+/* Grupo activo al frente */
+#g1:checked ~ .caja2 .grupo1 {
+  opacity: 1;
+  z-index: 10;
+}
+#g2:checked ~ .caja2 .grupo2 {
+  opacity: 1;
+  z-index: 10;
+}
+#g3:checked ~ .caja2 .grupo3 {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Estilos individuales */
+/* .img, .img2, .img3 {
+  width: 380px;
+  height: 520px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+  background-color: aliceblue;
+} */
+.img {
+  width: 380px;
+  height: 520px;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+  background-color: rgb(179, 255, 0);
+  background-image: url(../imagenes/kay.gif);
+  background-position: center; 
+  background-size: cover;
+}
+.img2 {
+  width: 380px;
+  height: 520px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+  background-color: rgb(3, 86, 158);
+  background-image: url(../imagenes/kay2.png);
+  background-position: center; 
+  background-size: cover;
+}
+.img3 {
+  width: 380px;
+  height: 520px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 18px;
+  transition: transform 0.3s ease;
+  background-color: rgb(146, 0, 127);
+  background-image: url(../imagenes/3.png);
+  background-position: center; 
+  background-size: cover;
+}
+
+.txt, .txt2, .txt3 {
+  width: 380px;
+  height: 520px;
+  background-color: rgba(0, 0, 0, 0.678);
+  border-radius: 16px;
+  color: white;
+  padding: 20px;
+  font-family: sans-serif;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.img:hover, .img2:hover, .img3:hover,
+.txt:hover, .txt2:hover, .txt3:hover {
+  transform: scale(1.03);
+}
+.nm{
+  margin-top: 660px;
+  position:end;
+  font-size: 20px;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
